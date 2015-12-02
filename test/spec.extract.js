@@ -149,4 +149,14 @@ describe('s18n.extract()', function() {
     }
   });
 
+  it('should allow plain hash algorithms', function() {
+    var html = '<p>This is a test.</p>';
+    var locale = s18n.extract(html, {
+      hashAlgorithm: 'plain'
+    });
+    assert.deepEqual(locale, {
+      'This is a test.': 'This is a test.'
+    });
+  });
+
 });
