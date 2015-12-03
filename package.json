@@ -38,8 +38,7 @@
     "htmlparser2": "^3.8.3",
     "mkdirp": "^0.5.1",
     "pify": "^2.2.0",
-    "pinkie-promise": "^1.0.0",
-    "striptags": "^2.0.4"
+    "pinkie-promise": "^1.0.0"
   },
   "devDependencies": {
     "coveralls": "^2.11.4",
