@@ -288,4 +288,20 @@ describe('s18n()', function() {
     });
   });
 
+  it('should localize html with s18n-locale', function() {
+    var html = '<p>This is a test <a s18n-locale="en">link</a><a s18n-locale="ru">ссылка</a>.</p>';
+    var localizedHtml = s18n(html, {
+      nativeLocale: {},
+      locales: {
+        'en': {},
+        'ru': {}
+      },
+      rewriteLangAttribute: false
+    });
+    assert.deepEqual(localizedHtml, {
+      'en': '<p>This is a test <a s18n-locale="en">link</a>.</p>',
+      'ru': '<p>This is a test <a s18n-locale="ru">ссылка</a>.</p>'
+    });
+  });
+
 });
